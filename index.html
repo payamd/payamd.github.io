@@ -1,10 +1,9 @@
 <!doctype html>
-<html>
+<html ng-app="payam">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Payamd.GitHub.io by payamd</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="javascripts/respond.js"></script>
@@ -15,24 +14,27 @@
     <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <script src="javascripts/angular.min.js"></script>
+    <script src="javascripts/angular-route.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/underscore-min.js"></script>
+    <script src="FirstApp.js"></script>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/styles.css">
   </head>
-  <body>
+  <body ng-controller="pctrl">
     <div class="wrapper">
 
-      <section>
+      <section style="margin: 0px;,padding:0px;">
         <div id="title">
           <h1>Payamd.GitHub.io</h1>
           <p>my personal website</p>
           <hr>
           <span class="credits left">Project maintained by <a href="https://github.com/payamd">payamd</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
-
-        <p>this is my first step to make my personal website on github :)</p>
-           <p>Thank you so much git to give us this awesome feature for free</p>
-      </section>
-
+          </div>
+ </section>
+      <div  class="container" style="color:#000000;" ng-view>
+      </div>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
               <script type="text/javascript">

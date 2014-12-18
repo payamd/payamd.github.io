@@ -1,0 +1,13 @@
+<section ng-controller="ExpensesViewController">
+    <button class="btn-success btn-group-lg col-lg-offset-5" ng-click="addnew()">add new</button>
+    <ul class="list-group">
+        <li ng-repeat="expense in expenses" class="list-group-item text-center">
+            <span class="pull-left col-xs-4">{{expense.id}} -- {{expense.description | uppercase}}  </span>
+            {{expense.amount}} $
+            <span class="pull-right">
+                <a class="btn-success btn-group-sm pull-right" href="#/edit/{{expense.id}}" >EDIT</a>
+                <button class="btn-danger  btn-group-lg pull-right" ng-click="remove(expense)">DELETE</button>
+            </span>
+        </li>
+    </ul>
+</section>
