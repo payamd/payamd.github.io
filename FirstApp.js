@@ -12,7 +12,7 @@ app.config(function($routeProvider){
             controller:'ExpensesViewController'
         })
         .when('/edit/:id',{
-            templateUrl :'views/Edit.html',
+            templateUrl :'views/edit.html',
             controller:'ExpensesEditViewController'
         })
         .when('/new',{
@@ -32,7 +32,7 @@ app.controller("pctrl",['$scope',function($scope){
  */
 app.factory('Expenses',function($http){
    var service={};
-    service.items=[]
+    service.items=[];
 
     $http.get('jdata.json').
         success(function(data){
