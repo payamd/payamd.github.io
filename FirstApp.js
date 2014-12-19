@@ -115,7 +115,7 @@ if(!$routeParams.id){
 
     $scope.Expenses = {id:'0' ,description: 'Bo0k', amount: 6, date: new Date().getFullYear()};
 } else{
-$scope.Expenses = _.clone(Expenses.getById($routeParams.id));
+$scope.Expenses = Expenses.getById($routeParams.id);
 
 }
 
